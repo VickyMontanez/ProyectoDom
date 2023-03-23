@@ -46,6 +46,30 @@ export default{
                 name :"Buy",
                 href: "https://www.amazon.com/-/en/Arctic-Monkeys/dp/B07CDZ6F9H",
             }
+        },
+
+        {
+            article:"Albums",
+            title:"Whatever People Say I Am, That's What I'm Not",
+            year:"2006",
+            paragraph:"The debut Arctic Monkeys album is one of the finest debut statements in rock history",
+            Image:"./img/card5.jpg",
+            btn:{
+                name :"Buy",
+                href: "https://www.amazon.com/Whatever-People-Say-Thats-What/dp/B000E116BM",
+            }
+        },
+
+        {
+            article:"Albums",
+            title:"Suck It & See",
+            year:"2011",
+            paragraph:"Fourth studio album from the British indie rock band.",
+            Image:"./img/card6.jpg",
+            btn:{
+                name :"Buy",
+                href: "https://www.amazon.com/-/es/Artic-Monkeys/dp/B004SGYJFE",
+            }
         }
     ],
 
