@@ -1,7 +1,7 @@
 import myBanner from "./componets/myBanner.js";
 import myHeader from "./componets/myHeader.js";
 import myCards from "./componets/myCards.js";
-import myArticle from "./componets/myArticleOne.js";
+import myArticleOne from "./componets/myArticleOne.js";
 import myAside from "./componets/myAside.js"
 
 /* MODULE FROM MY HEADER */
@@ -16,7 +16,7 @@ myBanner.showSectionBanner();
 myCards.showCard();
 
 /* MODULE FROM MY ARTICLE*/
-myArticle.showArticle();
+myArticleOne.showArticle();
 
 /* MODULE FROM MY ASIDE*/
 myAside.showAside();

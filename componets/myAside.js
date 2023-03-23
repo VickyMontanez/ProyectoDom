@@ -117,5 +117,5 @@ export default{
         <ol class="list-unstyled mb-0">
         ${val.link.map((val,id)=>`<li><a href="${val.link}" target="_blank">${val.name}</a></li>`).join("")}
         </ol><br>`)
-    }
+    },
 }
