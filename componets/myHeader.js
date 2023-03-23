@@ -6,39 +6,39 @@ export default {
     songs: [
         {
             name:"Teddy Picker",
-            href: "#"
+            href: "https://youtu.be/2A2XBoxtcUA"
         },
         {
             name:"505",
-            href: "#"
+            href: "https://youtu.be/bhk-yqnGlpM"
         },
         {
             name:"Arabella",
-            href: "#"
+            href: "https://youtu.be/Nj8r3qmOoZ8"
         },
         {
             name:"Brianstorm",
-            href: "#"
+            href: "https://youtu.be/30w8DyEJ__0"
         },
         {
             name:"Do I Wanna Know?",
-            href: "#"
+            href: "https://youtu.be/bpOSxM0rNPM"
         },
         {
             name:"Do Me a Favour",
-            href: "#"
+            href: "https://youtu.be/MaFEHf34fCQ"
         },
         {
             name:"Fluorescent Adolescent",
-            href: "#"
+            href: "https://youtu.be/ma9I9VBKPiw"
         },
         {
             name:"Old Yellow Bricks",
-            href: "#"
+            href: "https://youtu.be/NgLWF2XJyKA"
         },
         {
             name:"Snap Out of It" ,
-            href: "#"
+            href: "https://youtu.be/H8tLS_NOWLs"
         },
     ],
     listTitle (){
@@ -47,7 +47,7 @@ export default {
     listarSongs(){
         let plantilla = "";
         this.songs.forEach((val,id)=>{
-            plantilla += `<a class="p-2 link-secondary" href="#">${val.name}</a>`
+            plantilla += `<a class="p-2 link-secondary" href="${val.href}" target="_blank">${val.name}</a>`
         });
         document.querySelector("#songs").insertAdjacentHTML("beforeend", plantilla)
     },
