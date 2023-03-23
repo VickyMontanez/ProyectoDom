@@ -70,7 +70,7 @@ export default{
                 name :"Buy",
                 href: "https://www.amazon.com/-/es/Artic-Monkeys/dp/B004SGYJFE",
             }
-        }
+        },
     ],
 
     showCard(){
