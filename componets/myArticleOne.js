@@ -37,7 +37,7 @@ export default {
             paragraph5:"Arctic Monkeys’ recent live performances have also seen them bring out rarities from their back catalogue, including a moodier rendition of ‘Humbug’ standout ‘Potion Approaching’, and ‘That’s Where You’re Wrong’, a fuzzed-out singalong from the unfairly overlooked ‘Suck It And See’ era.",
             img1:"./img/1.png",
             img2:"./img/2.webp",
-            img3:"./img/3.jfif",
+            img3:"./img/3.jpeg",
             img4:"./img/4.jpg",
         },
     ],
