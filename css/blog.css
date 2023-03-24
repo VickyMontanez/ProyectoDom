@@ -104,7 +104,7 @@ h1, h2, h3, h4, h5, h6 {
   /* Firefox */
   * {
     scrollbar-width: thin;
-    scrollbar-color: #810c0cc7 #ffffff;
+    scrollbar-color: #085e66b6 #ffffff;
   }
 
   /* Chrome, Edge, and Safari */
@@ -117,7 +117,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: #810c0cc7;
+    background-color: #085e66b6;
     border-radius: 10px;
     border: 3px solid #ffffff;
   }
@@ -125,12 +125,11 @@ h1, h2, h3, h4, h5, h6 {
 /*
  * Footer
  */
-.blog-footer {
-  padding: 2.5rem 0;
+.blog-footer{
+  padding: 0.5rem 0;
   color: #727272;
   text-align: center;
-  background-color: #f9f9f9;
-  border-top: .05rem solid #e5e5e5;
+  background: rgba(0, 0, 0, 0.555);  /* fallback for old browsers */
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
@@ -145,4 +144,15 @@ h1, h2, h3, h4, h5, h6 {
 .responsiveImg{
   width: 250px;
   height: 250px;
+}
+
+.imgtableResp{
+  width: 300px;
+  height: 200px;
+}
+
+body{
+  background: #360033;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0b8793, #360033);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0b8793, #360033); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }

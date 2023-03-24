@@ -52,7 +52,7 @@ export default{
             article:"Albums",
             title:"Whatever People Say I Am, That's What I'm Not",
             year:"2006",
-            paragraph:"The debut Arctic Monkeys album is one of the finest debut statements in rock history",
+            paragraph:"The debut Arctic Monkeys album.",
             Image:"./img/card5.jpg",
             btn:{
                 name :"Buy",
