@@ -1,18 +1,59 @@
 export default{
-    title:"Arctic Monkeys’ Alex Turner Tells How ‘The Car’ Brings Together Historic and Current Sounds of One of Rock’s Most Important Bands",
-    date:"Octuber 21st, 2022",
-    autor:{
-        name:"Alex Swhear",
-        href:"https://variety.com/2022/music/news/arctic-monkeys-alex-turner-the-car-new-album-interview-1235411208/",
-    },
-    paragraph:"For Arctic Monkeys, recording the album is just the beginning. The next step is its own undertaking, a daunting one for a band with an increasingly eclectic catalogue: finding a way to make the new songs coexist with the old. Arctic Monkeys are one of the few authentically huge rock bands in an era where the genre’s cultural dominance has continued to wane; even rarer, they are one of the few authentically huge bands to refuse to make the same album twice. Alex Turner, the band’s frontman, says that the Monkeys are encouraged by early reactions to the new material. “One thing that seems to happen on every record is that it’s not until you start playing these things in front of a bunch of people that they reveal what they really are,” Turner says over a Zoom call. “These new ones… they don’t just fit anywhere, but it feels like we can find a way through a set.”",
+    article:[
+        {
+            title:"Arctic Monkeys in Colombia: ticket office and presale",
+            date:"12th June 2022",
+            autor:{
+                name:"Anderson Labrador",
+                href:"https://canaltrece.com.co/noticias/arctic-monkeys-bogota-2022/"
+            },
+            paragraph:"November 17 will be the third and final opportunity to see the band, Arctic Monkeys in all their splendor in Colombia. In 2014 it was its premiere in Bogotá in a concert at the El Campín Coliseum, in 2019 they closed the Estéreo Picnic Festival with impetus and fervor and Now it will be at the Live Coliseum, which will open its doors for the first concert of Páramo Presents in this new venue for Colombia. The valuations of the prices for the entrances are:",
+            local:{
+                name:"Location",
+                l1:"Platea 1",
+                l2:"113 - 120",
+                l3:"107 - 112",
+                l4:"Platea 2",
+                l5:"103 - 106",
+                l6:"100 - 102",
+                l7:"121 - 122",
+            },
+            Prec:{
+                name:"Price",
+                p1:"$369.000 COP",
+                p2:"$319.000 COP",
+                p3:"$279.000 COP",
+                p4:"$229.000 COP",
+                p5:"$249.000 COP",
+                p6:"$199.000 COP",
+                p7:"$139.000 COP",
+            },
+            Serv:{
+                name:"Service",
+                s1:"$66.000 COP",
+                s2:"$57.000 COP",
+                s3:"$50.000 COP",
+                s4:"$41.000 COP",
+                s5:"$44.000 COP",
+                s6:"$36.000 COP",
+                s7:"$25.000 COP",   
+            },
+            img:"./img/concert2.webp",
+        }
+    ],
 
-    img:"./img/5.jpg",
-
-    showArticle3(){
-        document.querySelector("#articulo3").insertAdjacentHTML("beforeend",`<h2 class="blog-post-title">${this.title}</h2>
-        <p class="blog-post-meta">${this.date} by <a href="#${this.autor.href}">${this.autor.name}</a></p>
-        <p>${this.paragraph}</p><br>
-        <img src="${this.img}" style ="max-width: 100%;">`)
+    showWorkArTwo(){
+        const ws = new Worker("storage/wsMyArticleTwo.js",{type:"module"});
+        let id = [];
+        let count= 0;
+        ws.postMessage({module: "showArticle2", data: this.article});
+        id=["#articulo2"]
+  
+        ws.addEventListener("message", (e)=>{
+            let doc= new DOMParser().parseFromString(e.data,"text/html");
+  
+            document.querySelector(id[count]).append(...doc.body.children);
+  
+            (id.length-1==count)? ws.terminate(): count++})
     }
 }

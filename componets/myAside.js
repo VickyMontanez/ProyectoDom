@@ -97,7 +97,7 @@ export default{
 
     ],
 
-    showAside(){
+/*     showAside(){
         this.nav.forEach((val,id)=>{
             if(val.link){
                 this.list(val);
@@ -117,5 +117,18 @@ export default{
         <ol class="list-unstyled mb-0">
         ${val.link.map((val,id)=>`<li><a href="${val.link}" target="_blank">${val.name}</a></li>`).join("")}
         </ol><br>`)
-    },
+    }, */
+
+    showWorkerAside(){
+        const ws = new Worker("storage/wsMyAside.js", {type:"module"});
+        ws.postMessage({module:"showAside", data: this.nav});
+        ws.addEventListener("message",(e)=>{
+            let doc = new DOMParser().parseFromString(e.data, "text/html");
+            console.log(doc);
+            document.querySelector("#navi").append(...doc.body.children);
+            ws.terminate();
+        } )
+    }
+
+
 }

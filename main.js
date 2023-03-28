@@ -2,26 +2,24 @@ import myBanner from "./componets/myBanner.js";
 import myHeader from "./componets/myHeader.js";
 import myCards from "./componets/myCards.js";
 import myArticleOne from "./componets/myArticleOne.js";
-import myArticle from "./componets/myArticle.js";
-import myAside from "./componets/myAside.js";
 import myArticleTwo from "./componets/myArticleTwo.js";
+import myArticleThree from "./componets/myArticleThree.js";
+import myAside from "./componets/myAside.js";
 
 
 /* MODULE FROM MY HEADER */
-myHeader.listTitle();
-myHeader.listarSongs();
+myHeader.showWork();
 
 /* MODULE FROM MY BANNER */
-myBanner.showImage();
-myBanner.showSectionBanner();
+myBanner.showWorkB();
 
 /* MODULE FROM MY CARDS */
-myCards.showCard();
+myCards.showWorkC();
 
 /* MODULE FROM MY ARTICLE*/
-myArticleOne.showArticle();
-myArticle.showArticle2();
-myArticleTwo.showArticle3()
+myArticleOne.showWorkArOne();
+myArticleTwo.showWorkArTwo();
+myArticleThree.showWorkArThree();
 
 /* MODULE FROM MY ASIDE*/
-myAside.showAside();
+myAside.showWorkerAside();
